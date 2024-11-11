@@ -1,0 +1,1 @@
+const HeaderLinks = ['About', 'Features', 'Customers', 'Help', 'Get for free']

@@ -8,17 +8,12 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-	colors: {
-		background: 'var(--background)',
-		foreground: 'var(--foreground)',
-		backgroundContrast: '#000',
-		text: '#1d1d1f',
-		white: '#fff'
-	},
   	extend: {
   		colors: {
-  			background: 'hsl(var(--background))',
-  			foreground: 'hsl(var(--foreground))',
+			background: 'var(--background)',
+			foreground: 'var(--foreground)',
+			backgroundContrast: '#000',
+			textColor: '#1d1d1f',
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
