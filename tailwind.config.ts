@@ -11,7 +11,7 @@ export default {
   theme: {
   	extend: {
 		screens: {
-			xs: '490px'
+			xs: '320px'
 		},
 		backgroundImage: {
 			'hero-pattern': "url('/Hero-pattern-dots.svg')"

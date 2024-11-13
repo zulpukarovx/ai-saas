@@ -6,7 +6,7 @@ import Link from "next/link"
 function Hero() {
   return (
     <section>
-      <div className="bg-hero-pattern h-[89svh] bg-[length:70px_70px]">
+      <div className="bg-hero-pattern h-[89svh] bg-[length:70px_70px] z-0">
         <Container className="px-6">
           <motion.div
             initial={{opacity: 0, y: -20}} 
