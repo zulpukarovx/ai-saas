@@ -11,7 +11,7 @@ import MobileNav from "./MobileNav";
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
-    const HeaderLinks = ['About', 'Features', 'Customers', 'Help', 'Get for free'];
+    const HeaderLinks = ['Features', 'Pricing', 'Customers', 'Get for free'];
 
     useEffect(() => {
         document.body.style.overflow = isOpen ? 'hidden' : 'auto';
@@ -27,7 +27,7 @@ function Header() {
             <p>Try our demo for free</p>
             <span><ArrowRight className="w-4"/></span>
         </div>
-        <header className="sticky top-0 bg-black text-white">
+        <header className="sticky top-0 bg-black text-white z-20">
             <Container className="py-3">
                 <div className="flex justify-between items-center">
                     <Link href="/">

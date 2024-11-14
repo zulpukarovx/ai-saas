@@ -1,5 +1,5 @@
 import Container from "@/components/container"
-import TestimonialCard from "@/components/TestimonialCard";
+import TestimonialCol from "@/components/TestimonialCol";
 import { testimonials } from "@/constants/constants"
 
 const firstColumn = testimonials.slice(0, 3);
@@ -19,15 +19,10 @@ const Testimonials = () => {
                         an essential tool for users around the world.
                     </p>
                 </div>
-                <div>
-                    {firstColumn.map(({ text, imageSrc, name, username }) => (
-                        <TestimonialCard 
-                            text={text} 
-                            imageSrc={imageSrc} 
-                            name={name}
-                            username={username}
-                        />
-                    ))}
+                <div className="flex justify-center gap-6">
+                    <TestimonialCol testimonials={firstColumn} />
+                    <TestimonialCol testimonials={secondColumn} className="hidden md:flex" />
+                    <TestimonialCol testimonials={thirdColumn} className="hidden lg:flex" />
                 </div>
             </div>
         </Container>
