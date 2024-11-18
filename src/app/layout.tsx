@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { sfDisplay } from "./fonts/fonts";
-import Header from "@/components/Header";
+import { ClerkProvider } from "@clerk/nextjs";
 
 
 export const metadata: Metadata = {
@@ -15,13 +15,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${sfDisplay.className} antialiased`}
-      >
-        <Header />
-        {children}
-      </body>
-    </html>
+    <ClerkProvider appearance={{
+      variables: {colorPrimary: "#000000"}
+    }}>
+      <html lang="en">
+        <body
+          className={`${sfDisplay.className} antialiased`}
+        >
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

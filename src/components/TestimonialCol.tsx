@@ -10,7 +10,8 @@ const TestimonialCol = (props: {className?: string; testimonials: typeof testimo
       )}
     >
         {props.testimonials.map(({ text, imageSrc, name, username }) => (
-            <TestimonialCard 
+            <TestimonialCard
+                key={name} 
                 text={text} 
                 imageSrc={imageSrc} 
                 name={name}
