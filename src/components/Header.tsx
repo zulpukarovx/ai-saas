@@ -7,11 +7,10 @@ import Container from "./container";
 import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import MobileNav from "./MobileNav";
-import { UserButton } from "@clerk/nextjs";
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
-    const HeaderLinks = ['Features', 'Pricing', 'Customers', 'Dashboard', 'Sign-in'];
+    const HeaderLinks = ['Features', 'Pricing', 'Customers', 'Get started'];
 
     useEffect(() => {
         document.body.style.overflow = isOpen ? 'hidden' : 'auto';
@@ -40,18 +39,18 @@ function Header() {
                         <span className="sr-only">Back to home</span>
                     </Link>
                     <button onClick={() => setIsOpen(prev => !prev)}>
-                        <Menu className="md:hidden" size={24} />
+                        <Menu className="md:hidden text-white" size={24} />
                     </button>
                     <nav className="hidden md:flex gap-6 items-center">
                         {HeaderLinks.map(link => (
-                            <Link 
-                                className={link === "Sign-in" ? "bg-white text-textColor px-4 py-1 rounded-lg" : "text-white/70 hover:text-white duration-200 transition-colors"} 
-                                key={link} href={link.toLowerCase()}
+                            <Link
+                                className={link === "Get started" ? "bg-white text-textColor px-3 py-0.5 rounded-lg hover:bg-white/85 duration-200 transition-all" : "text-white/70 hover:text-white duration-200 transition-colors"} 
+                                key={link}
+                                href={`#${link.toLowerCase()}`}
                             >
                                 {link}
                             </Link>
                         ))}
-                        <UserButton afterSwitchSessionUrl="/" />
                     </nav>
                 </div>
             </Container>

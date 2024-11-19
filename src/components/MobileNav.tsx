@@ -44,7 +44,7 @@ const MobileNav: React.FC<MobileNavLinkProps> = ({ onClick, HeaderLinks }) => {
                     <Link 
                         className="w-full text-white/50 hover:text-white transition-colors duration-300" 
                         key={link} 
-                        href={link.toLowerCase()}
+                        href={`#${link.toLowerCase()}`}
                         onClick={onClick}
                     >
                         {link}

@@ -4,7 +4,7 @@ import { pricingTiers } from "@/constants/constants"
 
 const Pricing = () => {
   return (
-    <section className="bg-white">
+    <section id="pricing" className="bg-white">
         <Container>
             <div className="py-20">
                 <div className="max-w-[500px] mx-auto text-center">

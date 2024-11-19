@@ -8,7 +8,7 @@ const thirdColumn = testimonials.slice(6, 9);
 
 const Testimonials = () => {
   return (
-    <section>
+    <section id="customers" className="scroll-mt-9">
         <Container>
             <div className="py-10">
                 <div className="max-w-[430px] mx-auto text-center">

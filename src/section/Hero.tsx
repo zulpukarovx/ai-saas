@@ -5,7 +5,7 @@ import Link from "next/link"
 
 function Hero() {
   return (
-    <section>
+    <section id="hero">
       <div className="bg-hero-pattern h-[89svh] bg-[length:70px_70px] z-0">
         <Container className="px-6">
           <motion.div

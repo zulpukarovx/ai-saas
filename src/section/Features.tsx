@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 
 const Features = () => {
   return (
-    <section className="bg-black">
+    <section id="features" className="bg-black scroll-mt-20">
       <Container>
         <motion.div
           initial={{opacity: 0, y: 20}} 

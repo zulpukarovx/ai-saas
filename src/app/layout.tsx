@@ -18,7 +18,7 @@ export default function RootLayout({
     <ClerkProvider appearance={{
       variables: {colorPrimary: "#000000"}
     }}>
-      <html lang="en">
+      <html lang="en" className="scroll-smooth">
         <body
           className={`${sfDisplay.className} antialiased`}
         >
